@@ -3,23 +3,11 @@
 
 <head>
 
-    <meta name="description" content="<?php echo lang('ACME Framework is a CodeIgniter powerful PHP pre-application that after installed on your server become an awesome single new application with a lot of features.')?>">
-    <meta name="keywords" content="ACME Framework, acme, framework, mvc, php, codeigniter, pre-application, powerful, application, simple">
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php echo APP_NAME ?> • <?php echo lang('A powerful CodeIgniter application framework') ?></title>
-
-    <!-- Core Scripts - Include with every page -->
-    <script src="<?php echo URL_JS ?>/jquery-1.10.2.js"></script>
-    <script src="<?php echo URL_JS ?>/bootstrap.js"></script>
-    <script src="<?php echo URL_JS ?>/plugins/bootbox/bootbox.min.js"></script>
-
-    <!-- App Scripts - Include with every page -->
-    <script src="<?php echo URL_JS ?>/app-functions.js"></script>
-
+    <title><?php echo APP_NAME ?></title>
     <!-- Core CSS - Include with every page -->
     <link href="<?php echo URL_CSS ?>/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo URL_CSS ?>/plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -27,275 +15,43 @@
     <!-- App CSS - Include with every page -->
     <link href="<?php echo URL_CSS ?>/bootflat.css" rel="stylesheet">
     <link href="<?php echo URL_CSS ?>/app-styles.css" rel="stylesheet">
-    <link href="<?php echo URL_CSS ?>/site.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo URL_IMG ?>/favicon.ico">
+	<style>
+		h1, h3, h4 { margin: 0 0 20px; }
+		h5 { margin: 0 0 5px; }
+		.panel-body { 
+			padding:25px;
 
-    <!-- Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-17976714-2', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+       	}
+	</style>
 
 </head>
 
-<body>
+<body style="margin:30px">
 
-<?php echo app_settings_inputs(); ?>
-    
-    <div class="wrapper">
+	<div class="row">
 
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            
-            <div class="navbar-header">
-                
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                <!-- brand/logo -->
-                <div class="navbar-brand"><a href="<?php echo URL_ROOT ?>"><img src="<?php echo URL_IMG ?>/logo-acme.png" /></a></div>
+		<div class="col-md-8 col-md-offset-2 text-center">
 
-            </div>
-            
-            <div class="navbar-collapse collapse">
-                
-                <ul class="nav navbar-nav">
-
-                    <li class="dropdown">
-                        
-                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-fw fa-globe"></i>
-                            
-                            <?php 
-                            
-                            // get language
-                            $lang = $this->session->userdata('language');
-
-                            // Write language name
-                            switch ($lang) {
-                                
-                                case 'en_US':
-                                default:
-                                    echo lang('English');
-                                break;
-                                
-                                case 'pt_BR':
-                                    echo lang('Brazilian Portuguese');
-                                break;
-                            }
-
-                            ?>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="javascript:void(0)" class="change-language" id="en_US">
-                                    <i class="fa fa-fw text-danger <?php echo $lang == 'en_US' ? 'fa-dot-circle-o' : 'fa-circle-o'; ?>"></i>
-                                    <?php echo lang('English') ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" class="change-language" id="pt_BR">
-                                    <i class="fa fa-fw text-danger <?php echo $lang == 'pt_BR' ? 'fa-dot-circle-o' : 'fa-circle-o'; ?>"></i>
-                                    <?php echo lang('Brazilian Portuguese') ?>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li><a href="http://demo.acmeframework.org" target="_blank"><?php echo lang('See a Demo')?></a></li>
-                                        
-                    <li><a href="<?php echo URL_ROOT ?>/docs"><?php echo lang('Docs')?></a></li>
-                    
-                    <li><a href="<?php echo URL_ROOT ?>/community"><?php echo lang('Community')?></a></li>
-
-                </ul>                
-        
-            </div>
-
-        </div>
-
-        <div id="page-wrapper">
-
-            <div class="module-header">
-
-			    <div class="row">
-
-			        <div class="col-sm-12 col-md-12 text-center">
-			            
-			            <h1 style="margin: 10px 0 20px 0; font-size: 180px">
-			            	404
-			            	<i class="fa fa-fw fa-search hidden-sm hidden-xs"></i>
-			            </h1>
-
-			        </div>
-
-			    </div>
-			    
+			<div class="panel panel-default panel-body" style="border: 1px solid #eee">
+				
+				<h1 style="font-size:90px"><?php echo lang('404')?></h1>
+				
+				<h3 class="hidden-lg hidden-md"><?php echo lang('This page doesn\'t exist')?></h3>
+				
+				<h1 class="hidden-xs hidden-sm"><?php echo lang('This page doesn\'t exist :(')?></h1>
+				
+				<h4><?php echo lang('Check the typed URL and try it again.')?></h4>
+						
+				<?php $url = $this->session->userdata('url_default') ? $this->session->userdata('url_default') : URL_ROOT; ?>
+				<a href="<?php echo $url ?>" class="btn btn-success btn-lg"><?php echo lang('Initial page')?> <i class="fa fa-arrow-circle-right fa-fw"></i></a>
+			
 			</div>
+		
+		</div>
 
-			<div class="module-body">
-
-			    <div class="row">
-
-			        <div class="col-sm-12 text-center">
-
-			            <h2 style="font-size: 65px"><?php echo lang('This page does not exist.')?></h2>
-
-			            <br />
-
-			            <br />
-			            
-			            <h3 class="text-muted" style="font-size: 35px"><?php echo lang('Check the typed URL and try it again.') ?></h3>
-
-			            <br />
-
-			            <br />
-
-			            <a class="btn btn-lg btn-success" href="<?php echo URL_ROOT ?>" style="font-size: 30px; font-weight: bold">
-			            	<i class="fa fa-fw fa-home"></i>
-			            	<?php echo lang('Go to initial page')?>
-			            </a>
-
-			            <br />
-
-			            <br />
-
-			            <br />
-
-			        </div>
-
-			    </div>
-
-			</div>
-
-            <div class="module-footer">
-
-                <div class="container">
-
-                <div class="row">
-
-                    <div class="col-md-3" style="margin: 0 0 30px">
-
-                        <img src="<?php echo URL_IMG ?>/logo-acme.png" class="img-responsive" style="margin: -10px 0 0 " />
-
-                    </div>
-
-                    <div class="col-md-4 col-md-offset-1" style="margin-bottom: 30px">
-
-                        <h4><?php echo lang('Pages') ?></h4>
-
-                        <p><a href="http://demo.acmeframework.org" target="_blank"><?php echo lang('See a demo') ?></a></p> 
-
-                        <p><a href="<?php echo URL_ROOT ?>/docs"><?php echo lang('Docs') ?></a></p>
-
-                        <p><a href="<?php echo URL_ROOT ?>/docs/older-versions"><?php echo lang('Older versions') ?></a></p>
-
-                        <p><a href="<?php echo URL_ROOT ?>/community"><?php echo lang('Community') ?></a></p>
-
-                        <p><a href="<?php echo URL_ROOT ?>/oracle"><?php echo lang('Oracle version') ?></a></p>
-                        
-                        <p><a href="http://www.codecomplex.com.br" target="_blank"><?php echo lang('Code Complex') ?></a></p>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <div class="social-buttons text-center">
-
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <a href="http://www.twitter.com/acmeframework" target="blank" title="<?php echo lang('Follow on twitter')?>">
-                                <i class="fa fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <a href="http://www.facebook.com/acmeframework" target="blank" title="<?php echo lang('Like on facebook')?>">
-                                <i class="fa fa-facebook fa-stack-1x"></i>
-                                </a>
-                            </span>
-
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <a href="http://github.com/code-complex/acmeframework" target="blank" title="<?php echo lang('Fork on github')?>">
-                                <i class="fa fa-github fa-stack-1x"></i>
-                                </a>
-                            </span>
-
-                        </div>
-
-                        <br />
-
-                        <div class="well">
-                        <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Facmeframework&amp;width=700&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=133367283442799" 
-                        scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:100%; width: 100%; background-color:#fff;" allowTransparency="true"></iframe>
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-                </div>
-
-            </div>
-        
-        </div>
-        <!-- /#page-wrapper -->
-        
-    </div>
-    <!-- /#wrapper -->
-
-    <div class="loading-layer"></div>
-    <div class="loading-box"><h4><i class="fa fa-fw fa-circle-o-notch fa-spin"></i> <?php echo lang('Loading')?></h4></div>
+	</div>
 
 </body>
-
-<script>
-
-    $.container_html();
-
-    // =================
-    // language callback
-    // =================
-    $('a.change-language').on('click', function () {
-        
-        $.change_language_custom($(this).attr('id'));
-    });
-
-    // ======================
-    // custom change language
-    // ======================
-    $.change_language_custom = function (language) {
-
-        $.enable_loading();
-
-        $.ajax({
-            url: $('#URL_ROOT').val() + '/change_language/' + language,
-            context: document.body,
-            dataType : 'json',
-            cache: false,
-            type: 'POST',
-            complete : function (data) {
-                
-                window.location.reload();
-
-            }
-        });
-    };
-
-</script>
 
 </html>

@@ -147,10 +147,8 @@
 
 /* Global and override Styles */
 body, html {
-    background-color: #fff;
+    background-color: #f5f5f5;
     color: #333;
-    padding: 0 !important;
-    margin: 0;
 }
 
 .bootbox .modal-body {
@@ -233,33 +231,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .module-header {
-    background-color: #fcf6f2;
+    background-color: #fcf1e8;
     padding: 30px;
     margin:  0;
     border-bottom: 1px solid #ddd
 }
 
-.module-social,
-.module-breadcrumbs {
-    background-color: #f5f5f5;
-    padding: 20px 30px;
-    margin:  0;
-    border-bottom: 1px solid #ddd
-}
-
-.module-breadcrumbs {
-    padding: 15px 30px;
-}
-
 .module-body {
     padding: 30px !important;
     margin: 0;
-}
-
-.module-footer {
-    padding: 30px !important;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.87);
 }
 
 .module-header h1,
@@ -316,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-wrapper {
-    margin: 30px 0 0;
+    margin: 30px 0;
     min-height: 100% !important;
 }
 
@@ -341,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
     padding-top: 0;
     padding-bottom: 0;
-    line-height: 40px;
+    line-height: 35px;
 }
 
 .navbar-nav li a i {
@@ -351,24 +331,24 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-collapse .navbar-nav,
 .navbar-collapse .navbar-nav .dropdown-menu li a {
     font-size: 14px;
-    line-height: 40px;
+    line-height: 35px;
     padding-bottom: 0;
     padding-top: 0;
     vertical-align: middle;
 }
 
 .navbar-brand {
-    min-height: 40px;
-    height: 40px;
+    min-height: 35px;
+    height: 35px;
     padding: 0;
     margin: 0 30px 0 0;
-    line-height: 40px;
+    line-height: 35px;
     vertical-align: middle;
 }
 
 .navbar-brand img {
     margin-top: -5px;
-    max-height: 25px;
+    max-height: 20px;
 }
 
 .navbar-brand a {
@@ -376,8 +356,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-    min-height: 40px;
-    height : 40px;
+    min-height: 35px;
+    height : 35px;
 }
 
 .navbar-fixed-top .navbar-collapse {
