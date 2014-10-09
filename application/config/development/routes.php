@@ -38,11 +38,11 @@
 |
 */
 $route['404_override'] = '';
-$route['default_controller'] = "site";
+$route['default_controller'] = "acme/app_access";
 
 // Regras de roteamento genéricas:
 // Todo o controlador que tiver o prefixo app_ será direcionado para controllers/acme/app_...
-$route['(:any)'] = "site/$1";
+$route['app_(:any)'] = "acme/app_$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
