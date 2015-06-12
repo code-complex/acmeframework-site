@@ -1,4 +1,4 @@
-<div class="module-header">
+<div class="module-header" style="background-image: url(<?php echo URL_IMG ?>/bg-lazy.jpg); background-size: cover">
 
     <div class="row">
 

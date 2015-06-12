@@ -1,21 +1,35 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
-* --------------------------------------------------------------------------------------------------
-*
-* Controller Site
-* 
-* Site controller. Manage all ACME FMK site pages.
-*
-* @since	16/08/2014
-*
-* --------------------------------------------------------------------------------------------------
-*/
-class Site extends ACME_Core_Controller {
-	
+ * --------------------------------------------------------------------------------------------------
+ * Controller Site
+ *
+ * Site default controller. Gathers all routes.
+ *
+ * @since 	16/08/2014
+ * --------------------------------------------------------------------------------------------------
+ */
+class Site extends ACME_Controller {
+
 	/**
-	* __construct()
-	* Class constructor.
-	*/
+	 * Define if controller is external or not.
+	 *
+	 * 		TRUE:
+	 * 			=> Session validation is skipped
+	 * 			=> Database layer is not loaded
+	 * 			=> Module/controller is not loaded from database
+	 *
+	 * 		FALSE:
+	 * 			=> Session is validated
+	 * 			=> Database layer is loaded
+	 * 			=> Module/controller is attempted to loaded
+	 *
+	 * @var boolean
+	 */
+	protected $external = true;
+
+	/**
+	 * Class constructor.
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -28,7 +42,7 @@ class Site extends ACME_Core_Controller {
 		if ( $this->session->userdata('url_default') == '')
 			$this->session->set_userdata('url_default', 'http://www.acmeframework.org');
 	}
-	
+
 	/**
 	* index()
 	* Index site.
@@ -36,7 +50,7 @@ class Site extends ACME_Core_Controller {
 	*/
 	public function index()
 	{
-		$this->template->load_page('site/index');
+		$this->template->load_view($this->controller . '/index');
 	}
 
 	/**
@@ -49,22 +63,22 @@ class Site extends ACME_Core_Controller {
 	{
 		$version = strtolower($version);
 
-		$allowed = array('older-versions', 
-						 '2.3.12', 
-						 '2.2.12', 
-						 '2.2.11', 
-						 '2.2.10', 
-						 '2.1.10', 
-						 '2.1.9', 
-						 '2.1.8', 
+		$allowed = array('older-versions',
+						 '2.3.12',
+						 '2.2.12',
+						 '2.2.11',
+						 '2.2.10',
+						 '2.1.10',
+						 '2.1.9',
+						 '2.1.8',
 						 '2.1.7',
-						 '2.1.6-beta', 
-						 '2.1.5-beta', 
-						 '2.1.4-beta', 
-						 '2.1.3-beta', 
-						 '2.0.3-beta', 
-						 '2.0.2-beta', 
-						 '2.0.1-beta', 
+						 '2.1.6-beta',
+						 '2.1.5-beta',
+						 '2.1.4-beta',
+						 '2.1.3-beta',
+						 '2.0.3-beta',
+						 '2.0.2-beta',
+						 '2.0.1-beta',
 						 '1.0.0'
 						 );
 
@@ -79,7 +93,7 @@ class Site extends ACME_Core_Controller {
 		$args['allowed'] = $allowed;
 
 		// Load properly page
-		$this->template->load_page('site/docs/' . $version . '.php', $args);
+		$this->template->load_view($this->controller . '/docs/' . $version . '.php', $args);
 	}
 
 	/**
@@ -101,7 +115,7 @@ class Site extends ACME_Core_Controller {
 	{
 		$this->template->load_page('site/oracle');
 	}
-	
+
 	/**
 	* not_found()
 	* For 404 pages.
@@ -128,7 +142,7 @@ class Site extends ACME_Core_Controller {
 	* build_translation_file()
 	* This is a very useful action. It catch all lang() function calls from
 	* every file on entire project and build a language file containing all
-	* translatable indexes. 
+	* translatable indexes.
 	*
 	* BE CAREFUL: THIS FUNCTION ERASE ALL CONTENT OF LANGUAGE FILES.
 	*
@@ -146,7 +160,7 @@ class Site extends ACME_Core_Controller {
 
 		// First foreach all project files
 		foreach(get_filenames('application', true) as $key => $file) {
-			
+
 			// get content of current file
 			$content = read_file($file);
 
@@ -162,7 +176,7 @@ class Site extends ACME_Core_Controller {
 
 					// List every call per file
 					$lang_calls[str_replace(getcwd() . '/', '', $file)][] = $match;
-				
+
 				}
 
 			}
@@ -188,7 +202,7 @@ class Site extends ACME_Core_Controller {
 
 		// Now insert on translate file all calls grouped by file, just for reading
 		foreach ($lang_calls as $file => $matches) {
-			
+
 			if($file != $before)
 				$content .= "\n\n// File " . $file;
 

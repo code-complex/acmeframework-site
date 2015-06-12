@@ -1,153 +1,157 @@
-<div class="module-header">
+<div class="module-header front-page">
 
     <div class="row">
 
-        <div class="col-sm-12 col-md-7">
+        <div class="col-sm-10 col-sm-offset-1">
 
             <div class="text-center">
-            
-            <h1 style="margin: 10px 0 20px 0">ACME Framework</h1>
-            
-            <h2 style="margin: 10px 0 30px 0"><?php echo lang('Build PHP applications has never been easier!') ?></h2>
 
-            <a class="btn btn-lg btn-success" href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip" style="margin-bottom: 15px">
-                <i class="fa fa-fw fa-download"></i>
-                <?php echo lang('Free download') ?>
                 <br />
-                <small class="pull-right"><?php echo lang('Version') ?> <?php echo ACME_VERSION ?></small>
-            </a>
-
-            &nbsp;
-            &nbsp;
-
-            <a class="btn btn-lg btn-default" href="<?php echo URL_ROOT ?>/oracle" style="margin-bottom: 15px">
-                <i class="fa fa-fw fa-arrow-circle-right"></i>
-                <?php echo lang('Get for Oracle') ?>
+                <h1>ACME Framework</h1>
                 <br />
-                <small class="text-muted pull-right"><?php echo lang('Only US$ 29,99')?></small>
-            </a>
 
-            <div style="margin: 15px 0 0">
-                
-                <small>
+                <p class="text-lead text-center">
+                    <?php echo lang('ACME Framework is a CodeIgniter powerful small application with a lot of features ready-to-use like')?> <strong><?php echo lang('login') ?></strong>, <strong><?php echo lang('users') ?></strong>, <strong><?php echo lang('permissions') ?></strong>, <strong><?php echo lang('menus') ?></strong>, a <strong><?php echo lang('powerful API') ?></strong> and <strong><?php echo lang('more') ?></strong>.
+                    <a href="https://www.github.com/code-complex/acmeframework" target="_blank"><?php echo lang('View on Github') ?> <i class="fa fa-fw fa-github"></i></a>.
+                </p>
 
-                    <a href="http://github.com/code-complex/acmeframework" target="_blank"><?php echo lang('GitHub page') ?></a>
+                <br />
 
-                    &nbsp;
-                    &bull;
-                    &nbsp;
+                <a class="btn btn-md btn-success" href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip" style="margin-bottom: 15px">
+                    <h4 style="margin: 5px 0">
+                        <i class="fa fa-fw fa-download"></i>
+                        <?php echo lang('Free download') ?>
+                    </h4>
+                    <small class="pull-right"><?php echo lang('Version') ?> <?php echo ACME_VERSION ?></small>
+                </a>
 
-                    <a href="<?php echo URL_ROOT ?>/docs/older-versions"><?php echo lang('Older versions') ?></a>
+                &nbsp;
+                &nbsp;
 
-                    &nbsp;
-                    &bull;
-                    &nbsp;
-
-                    <?php echo lang('Created by') ?> <a href="http://twitter.com/leanndro" target="_blank">Leandro Antunes</a>
-
-                    &nbsp;
-                    &bull;
-                    &nbsp;
-
-                    <?php echo lang('Maintained by') ?> <a href="http://www.codecomplex.com.br" target="_blank">Code Complex</a>
-
-                </small>
+                <a class="btn btn-md btn-default" href="http://demo.acmeframework.org" style="margin-bottom: 15px">
+                    <h4 style="margin: 5px 0">
+                        <i class="fa fa-fw fa-external-link-square"></i>
+                        <?php echo lang('See a demo') ?>
+                    </h4>
+                    <small class="pull-right"><?php echo lang('Web application')?></small>
+                </a>
 
             </div>
 
         </div>
 
-        </div>
+    </div>
 
-        <div class="col-md-4 col-md-offset-1">
+    <div class="row">
 
-            <div id="img-carousel" class="carousel slide" data-ride="carousel">
+        <div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
 
-                <!-- Carousel items -->
-                <div class="carousel-inner">
+            <br />
 
-                    <div class="item active"><div><img src="<?php echo URL_UPLOAD ?>/app-ss-01.png" class="img-responsive img-rounded"/></div></div>
+            <div class="panel panel-default browser-window">
 
-                    <div class="item"><div><img src="<?php echo URL_UPLOAD ?>/app-ss-02.png" class="img-responsive img-rounded" /></div></div>
+                <div class="panel-heading circles">
+                    <div class="circle circle-red"></div>
+                    <div class="circle circle-yellow"></div>
+                    <div class="circle circle-green"></div>
+                </div>
 
-                    <div class="item"><div><img src="<?php echo URL_UPLOAD ?>/app-ss-03.png" class="img-responsive img-rounded" /></div></div>
+                <div class="panel-body content">
 
-                    <div class="item"><div><img src="<?php echo URL_UPLOAD ?>/app-ss-04.png" class="img-responsive img-rounded" /></div></div>
+                    <div class="carousel slide" id="carousel-site" data-ride="slide">
 
-                    <div class="item"><div><img src="<?php echo URL_UPLOAD ?>/app-ss-05.png" class="img-responsive img-rounded" /></div></div>
-                    
-                    <div class="item"><div><img src="<?php echo URL_UPLOAD ?>/app-ss-06.png" class="img-responsive img-rounded" /></div></div>
+                        <div class="carousel-inner">
 
-                    <div class="item"><div><img src="<?php echo URL_UPLOAD ?>/app-ss-07.png" class="img-responsive img-rounded" /></div></div>
+                            <div class="item active">
+
+                                <pre class="code-php">
+&lt;?php
+/**
+ * Controller / Module Site
+ */
+class Site extends ACME_Controller {
+
+    // Define if controller is external or not
+    protected $external = true;
+
+    // Initialize ACME Core and CI_Controller
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    // Map to URL site/something
+    public function something()
+    {
+        $this->template->load_view($this->controller . '/something');
+    }
+}
+                                </pre>
+
+                            </div>
+
+                            <div class="item"><div><img src="<?php echo URL_UPLOAD ?>/site-content/app-installer.png" class="img-responsive"/></div></div>
+
+                            <div class="item"><div><img src="<?php echo URL_UPLOAD ?>/site-content/app-login.png" class="img-responsive" /></div></div>
+
+                            <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-dashboard.png" class="img-responsive" /></div>
+
+                            <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-module-manager.png" class="img-responsive" /></div>
+
+                            <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-logs.png" class="img-responsive" /></div>
+
+                            <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-menus.png" class="img-responsive" /></div>
+
+                            <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-users.png" class="img-responsive" /></div>
+
+                            <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-profile.png" class="img-responsive" /></div>
+
+                            <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-permissions.png" class="img-responsive" /></div>
+
+                        </div>
+
+                        <a class="left carousel-control" href="#carousel-site" role="button" data-slide="prev">
+                            <span class="fa-stack fa-1x">
+                              <i class="fa fa-circle-thin fa-stack-2x"></i>
+                              <i class="fa fa-arrow-left fa-stack-1x"></i>
+                            </span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+
+                        <a class="right carousel-control" href="#carousel-site" role="button" data-slide="next">
+                            <span class="fa-stack fa-1x">
+                              <i class="fa fa-circle-thin fa-stack-2x"></i>
+                              <i class="fa fa-arrow-right fa-stack-1x"></i>
+                            </span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+                    </div>
 
                 </div>
 
-                <!-- Carousel nav -->
-                <a class="carousel-control left" href="#img-carousel" data-slide="prev">
-                    <i class="fa fa-arrow-circle-left"></i>
-                </a>
-
-                <a class="carousel-control right" href="#img-carousel" data-slide="next">
-                    <i class="fa fa-arrow-circle-right"></i>
-                </a>
-            
-            </div>
-
-        </div>
-
-    </div>
-    
-</div>
-
-<div class="module-social">
-
-    <div class="container">
-
-    <div class="row">
-
-        <div class="col-sm-12">
-
-            <div class="text-center">
-
-            <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=watch&count=true"
-            allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-
-            <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=fork&count=true"
-            allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-
-            <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=follow&count=true"
-            allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
-
-            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Facmeframework&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId=133367283442799" 
-            scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" width="160" allowTransparency="true"></iframe>
-
-            <a href="https://twitter.com/acmeframework" class="twitter-follow-button" data-show-count="false">Follow @acmeframework</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
             </div>
 
         </div>
 
     </div>
 
-    </div>
-
 </div>
 
-<div class="module-body">
+<div class="module-body front-page">
 
     <div class="row">
 
         <div class="col-sm-12">
-
-            <p class="text-lead"><?php echo lang('ACME Framework is a CodeIgniter powerful PHP pre-application that after installed on your server become an awesome single new application with a lot of features.')?> <a href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('Get it now') ?></a> <?php echo lang('or') ?> <a href="http://demo.acmeframework.org" target="_blank"><?php echo lang('See a demo!') ?></a></p>
 
             <div class="row" style="margin-top: 30px">
 
                 <div class="col-sm-4">
 
-                    <h3><?php echo lang('Global features') ?></h3>
-
+                    <div class="text-center"><i class="fa fa-fw fa-cubes fa-5x"></i></div>
+                    <br />
+                    <h3 class="text-center"><?php echo lang('Global features') ?></h3>
+                    <br />
                     <p><?php echo lang('ACME Framework has a lot of cool and powerful features:')?></p>
 
                     <ul>
@@ -157,6 +161,7 @@
                         <li><?php echo lang('Users, groups and permissions')?></li>
                         <li><?php echo lang('Generic dashboard')?></li>
                         <li><?php echo lang('Dynamic menus')?></li>
+                        <li><?php echo lang('Errors mapper')?></li>
                         <li><?php echo lang('Logs management')?></li>
                         <li><?php echo lang('Module builder (CRUD generator)')?></li>
                         <li><?php echo lang('100% mobile support')?></li>
@@ -166,21 +171,23 @@
 
                 <div class="col-sm-4">
 
-                    <h3><?php echo lang('Technologies') ?></h3>
+                    <div class="text-center"><i class="fa fa-fw fa-code fa-5x"></i></div>
+                    <br />
+                    <h3 class="text-center"><?php echo lang('Technologies') ?></h3>
+                    <br />
 
                     <p><?php echo lang('ACME Framework is builded and uses some of the better technologies:') ?></p>
 
                     <ul>
-                        <li>CodeIgniter (php - 2.2.0)</li>
-                        <li>Bootstrap (css|js - 3.1.1)</li>
-                        <li>Bootflat (css|js - 2.0.1)</li>
-                        <li>Bootbox (js - 4.2.0)</li>
-                        <li>DataTables (css|js - 1.10.0)</li>
+                        <li>CodeIgniter (php - 3.0.0)</li>
+                        <li>Bootstrap (css, js - 3.3.4)</li>
+                        <li>Bootflat (css, js - 2.0.4)</li>
+                        <li>Bootbox (js - 4.4.0)</li>
+                        <li>DataTables (css, js - 1.10.6)</li>
                         <li>Dropzone (js - latest release)</li>
-                        <li>iCheck (css|js - 1.0.2)</li>
-                        <li>imgAreaSelect (css|js - 0.9.10)</li>
-                        <li>MagicSuggest (css|js - latest release)</li>
-                        <li>MeioMask (js - 1.1.13)</li>
+                        <li>imgAreaSelect (css, js - 0.9.10)</li>
+                        <li>MagicSuggest (css, js - latest release)</li>
+                        <li>MeioMask (js - 1.1.14)</li>
                         <li>Nestable (js - latest release)</li>
                         <li>ValidationEngine (js - 2.6.2)</li>
                     </ul>
@@ -189,7 +196,10 @@
 
                 <div class="col-sm-4">
 
-                    <h3><?php echo lang('Requirements') ?></h3>
+                    <div class="text-center"><i class="fa fa-fw fa-server fa-5x"></i></div>
+                    <br />
+                    <h3 class="text-center"><?php echo lang('Requirements') ?></h3>
+                    <br />
 
                     <p><?php echo lang('Use ACME Framework does not require a lot of resources. You just need:') ?></p>
 
@@ -197,7 +207,7 @@
                         <li>PHP 5.3.5+</li>
                         <li>MySQL 5.0+, PostgreSQL 9.0+ or Oracle 10G+</li>
                         <li>MySQL, PostgreSQL or Oracle PHP extension</li>
-                        <li>Apache rewrite engine</li>
+                        <li>Apache rewrite engine (for apache webservers)</li>
                     </ul>
 
                 </div>
@@ -209,3 +219,133 @@
     </div>
 
 </div>
+
+<div class="module-social">
+
+    <div class="container">
+
+        <h2 class="text-center"><?php echo lang('Get in touch!') ?> <i class="fa fa-fw fa-comments"></i></h2>
+
+        <br />
+        <br />
+
+        <div class="row">
+
+            <div class="col-sm-3">
+
+                <h3>Github</h3>
+
+                <p class="text-lead"><?php echo lang('View and star ')?> <a href="http://www.github.com/code-complex/acmeframework" target="_blank"><?php echo lang('project on Github')?></a>.</p>
+
+                <hr />
+
+                <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=watch&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+
+                <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=fork&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+
+            </div>
+
+            <div class="col-sm-3">
+
+                <h3>Twitter</h3>
+
+                <p class="text-lead"><?php echo lang('Follow @acmeframework and')?> <a href="http://www.twitter.com/leandrowkz" target="_blank">@leandrowkz</a> <?php echo lang('on Twitter') ?>.</p>
+
+                <hr />
+
+                <a href="https://twitter.com/acmeframework" class="twitter-follow-button" data-show-count="false">@acmeframework</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+            </div>
+
+            <div class="col-sm-3">
+
+                <h3>Facebook</h3>
+
+                <p class="text-lead"><?php echo lang('Like Facebook ACME Framework')?> <a href="http://www.facebook.com/acmeframework" target="_blank"><?php echo lang('project page') ?></a>.</p>
+
+                <hr />
+
+                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Facmeframework&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId=133367283442799"
+                scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" width="160" allowTransparency="true"></iframe>
+
+            </div>
+
+            <div class="col-sm-3">
+
+                <h3>Code Complex</h3>
+
+                <p class="text-lead"><?php echo lang('Visit the maintainers company page') ?>.</p>
+
+                <hr />
+
+                <a href="http://www.codecomplex.com.br" target="_blank" class="btn btn-xs btn-primary">Code Complex <i class="fa fa-fw fa-external-link-square"></i></a>
+
+            </div>
+
+        </div>
+
+        <div style="margin: 15px 0 0">
+
+            <small>
+
+                <a href="http://github.com/code-complex/acmeframework" target="_blank"><?php echo lang('GitHub page') ?></a>
+
+                &nbsp;
+                &bull;
+                &nbsp;
+
+                <a href="<?php echo URL_ROOT ?>/docs/older-versions"><?php echo lang('Older versions') ?></a>
+
+                &nbsp;
+                &bull;
+                &nbsp;
+
+                <?php echo lang('Created by') ?> <a href="http://twitter.com/leanndro" target="_blank">Leandro Antunes</a>
+
+                &nbsp;
+                &bull;
+                &nbsp;
+
+                <?php echo lang('Maintained by') ?> <a href="http://www.codecomplex.com.br" target="_blank">Code Complex</a>
+
+            </small>
+
+        </div>
+
+    <div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <div class="text-center">
+
+
+
+            <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=follow&count=true"
+            allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</div>
+
+<!-- JQuery Snippet Highlighter Plugin -->
+<script type="text/javascript" src="<?php echo URL_JS ?>/jquery-snippet/jquery.snippet.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo URL_JS ?>/jquery-snippet/jquery.snippet.min.css" />
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("pre.code-php").snippet("php", { style : "ide-codewarrior", menu : false });
+    });
+</script>
