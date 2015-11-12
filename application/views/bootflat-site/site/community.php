@@ -4,16 +4,16 @@
 
         <div class="col-sm-12 col-md-12">
 
-            <i class="fa fa-fw fa-thumbs-up hidden-sm hidden-xs pull-right" style="font-size: 140px"></i>
-            
+            <i class="fa fa-fw fa-comments hidden-sm hidden-xs pull-right" style="font-size: 140px"></i>
+
             <h1 style="margin: 10px 0 20px 0"><?php echo lang('Community') ?></h1>
-            
+
             <h3 style="margin: 10px 0 10px 0"><?php echo lang('Get envolved with ACME Framework') ?></h3>
 
         </div>
 
     </div>
-    
+
 </div>
 
 <div class="module-breadcrumbs">
@@ -27,7 +27,7 @@
             <ol class="breadcrumb">
 
                 <li><a href="<?php echo URL_ROOT ?>" style="font-size: 18px"><i class="fa fa-fw fa-home"></i></a></li>
-                
+
                 <li><?php echo lang('Community') ?></li>
 
             </ol>
@@ -131,7 +131,7 @@
                 <?php echo lang('If you know another language and want to improve ACME Framework by adding support for this language you can do it!')?>
                 <ol>
                     <li>
-                        <a href="http://github.com/code-complex/acmeframework/fork" target="_blank">Fork</a> 
+                        <a href="http://github.com/code-complex/acmeframework/fork" target="_blank">Fork</a>
                         <?php echo lang('the project and then clone it on your development server') ?>.
                     </li>
                     <li>
@@ -202,22 +202,22 @@
 </div>
 
 <div class="modal fade" id="modal-languages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        
+
 <div class="modal-dialog">
-    
+
     <div class="modal-content">
-        
+
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             <h4 class="modal-title" id="myModalLabel"><?php echo lang('New menu')?></h4>
         </div>
-        
+
         <div class="modal-body">
 
             <div class="table-responsive">
 
             <table class="table table-hover table-striped table-bordered no-footer">
-                
+
                 <thead>
                     <tr>
                         <th style="width: 01%"><?php echo lang('Language') ?></th>
@@ -1173,9 +1173,9 @@
                         <td >South Africa</td>
                     </tr>
                 </tbody>
-            
+
             </table>
-            
+
             </div>
 
         </div>
