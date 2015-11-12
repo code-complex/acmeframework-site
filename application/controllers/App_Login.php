@@ -1,14 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * --------------------------------------------------------------------------------------------------
- * App_Login
+ * App_login
  *
  * Application login. Handle all application login/logout.
  *
  * @since	14/04/2015
  * --------------------------------------------------------------------------------------------------
  */
-class App_Login extends ACME_Controller {
+class App_login extends ACME_Controller {
 
 	/**
 	 * Define if controller is external or not.
@@ -33,9 +33,6 @@ class App_Login extends ACME_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-
-		// Redirect to Site
-		redirect('site');
 
 		// Set controller link
 		$this->controller_link = strtolower(str_replace('_', '-', $this->controller));

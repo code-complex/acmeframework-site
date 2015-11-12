@@ -64,6 +64,7 @@ class Site extends ACME_Controller {
 		$version = strtolower($version);
 
 		$allowed = array('older-versions',
+						 '3.0.0',
 						 '2.3.12',
 						 '2.2.12',
 						 '2.2.11',

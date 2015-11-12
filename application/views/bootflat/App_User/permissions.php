@@ -90,7 +90,27 @@
 
             <?php endif ?>
 
-            <h3>Permissions</h3>
+            <?php
+            // Protect ROOT users
+            if ($this->protect_root_users && strtoupper(get_value($user, 'user_group')) == 'ROOT') {
+                $action = '';
+                $disabled = ' disabled="disabled"';
+                $method = '';
+            ?>
+
+            <div style="margin: 15px 0 30px"><?php echo message('warning', lang('Attention!'), lang('You are not able to edit ROOT users at this time. Go to') . ' <strong>controllers/App_User.php</strong> ' . lang('and change the attribute') . ' <code>$protect_root_users</code> ' . lang('from') . ' <strong>TRUE</strong> ' . lang('to') . ' <strong>FALSE</strong>.') ?></div>
+
+            <?php
+            } else {
+                $action = ' action="' . URL_ROOT . '/app-user/edit-profile/' .  $id_user . '/true"';
+                $disabled = ' ';
+                $method = ' method="post"';
+            }
+            ?>
+
+            <h3><?php echo lang('Permissions') ?></h3>
+
+            <fieldset <?php echo $disabled ?>>
 
             <div class="permission" style="margin-bottom: 40px;">
 
@@ -130,8 +150,9 @@
 
             </div>
 
-            </div>
-            </div>
+            </fieldset>
+
+        </div>
 
     </div>
 

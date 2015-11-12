@@ -98,9 +98,29 @@
 
             <div class="row">
 
+                <?php
+                // Protect ROOT users
+                if ($this->protect_root_users && strtoupper(get_value($user, 'user_group')) == 'ROOT')  {
+                    $action = '';
+                    $disabled = ' disabled="disabled"';
+                    $method = '';
+                ?>
+
+                <div class="col-sm-12" style="margin: 15px 0"><?php echo message('warning', lang('Attention!'), lang('You are not able to edit ROOT users at this time. Go to') . ' <strong>controllers/App_User.php</strong> ' . lang('and change the attribute') . ' <code>$protect_root_users</code> ' . lang('from') . ' <strong>TRUE</strong> ' . lang('to') . ' <strong>FALSE</strong>.') ?></div>
+
+                <?php
+                } else {
+                    $action = ' action="' . URL_ROOT . '/app-user/edit-profile/' .  $id_user . '/true"';
+                    $disabled = ' ';
+                    $method = ' method="post"';
+                }
+                ?>
+
                 <div class="col-sm-8 col-xs-12 user-info">
 
-                    <form role="form" action="<?php echo URL_ROOT ?>/app-user/edit-profile/<?php echo $id_user ?>/true" method="post" style="margin-left: 2px;">
+                    <form <?php echo $action . $method ?> style="margin-left: 2px;">
+
+                        <fieldset <?php echo $disabled ?>>
 
                         <input type="hidden" name="id_user" id="id_user" value="<?php echo $id_user ?>" />
 
@@ -126,6 +146,8 @@
                             <button class="btn btn-success" type="submit"><?php echo lang('Save') ?> <i class="fa fa-fw fa-check-circle"></i></button>
                             <a class="btn btn-default" href="<?php echo URL_ROOT ?>/app-user/profile/<?php echo $id_user ?>"><?php echo lang('Cancel') ?></a>
                         </div>
+
+                        </fieldset>
 
                     </form>
 

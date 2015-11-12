@@ -33,7 +33,7 @@
 $CI =& get_instance();
 
 // Build all attributes
-$type =strtolower(get_value($field, 'type'));
+$type = strtolower(get_value($field, 'type'));
 $label = get_value($field, 'label');
 $id = 'id="' . get_value($field, 'id_html') . '"';
 $name = 'name="' . get_value($field, 'table_name') . '[' . get_value($field, 'table_column') . ']"';
@@ -77,15 +77,38 @@ switch($type) {
 
 	case 'select':
 	case 'radio':
+	case 'checkbox':
 
 		// Build html options adding first sql options then json options after
-		$sql = ($options_sql != '') ? $CI->db->query($options_sql)->result_array() : array();
+		$sql_temp = ($options_sql != '') ? $CI->db->query($options_sql)->result_array() : array();
 
-		$json = ($options_json != '') ? json_decode($options_json) : array();
+		// Adjust SQL options
+		$sql = array();
+		foreach ($sql_temp as $row) {
+
+			$option_value = array_values($row);
+			$option_label = array_values($row);
+
+			// Add option to JSON
+			$sql[] = array( 0 => $option_value[0], 1 => $option_label[1]);
+		}
+
+		// Get JSON options
+		$json_temp = ($options_json != '') ? json_decode($options_json, true) : array();
+
+		// Adjust JSON options
+		$json = array();
+		foreach ($json_temp as $row) {
+			$option_value = array_keys($row);
+			$option_label = array_values($row);
+
+			// Add option to JSON
+			$json[] = array( 0 => $option_value[0], 1 => $option_label[0]);
+		}
 
 		$options = array_merge($sql, $json);
 
-		if($type == 'select') {
+		if ($type == 'select') {
 
 			// build <select>
 			$html_field  = "<select $name $id $class $style $javascript>";
@@ -94,23 +117,52 @@ switch($type) {
 
 		}
 
-		if($type == 'radio') {
+		if ($type == 'radio') {
+
+			$html_field = '';
+			$class = ' class="' . $CI->form->build_string_validation(get_value($field, 'validations')) . '"';
 
 			// Build all radios
-			foreach($options as $option) {
+			foreach ($options as $option => $option_values) {
 
-				$option = array_values($option);
-				$field_value = 'value="' . $option[0] . '"';
-				$checked = ($option[0] == $value) ? ' checked="true"' : '';
-				$return[$key] .=  "<div class=\"inline top\" style=\"margin-top:2px\"><input type=\"radio\" $name $id $class $maxlength $masks $style $javascript $field_value $checked /></div>";
-				$return[$key] .=  '<div class="inline top" style="margin-left:4px">' . $option[1] . '</div><br />';
+				$field_value = 'value="' . $option_values[0] . '"';
+				$checked = ($value == $option_values[0]) ? ' checked="true"' : '';
+
+				$html_field .= '
+				<div class="radio">
+	                <label>
+	                	<input type="radio" ' . $name . $id . $class . $maxlength . $masks . $style . $javascript . $field_value . $checked . ' />
+		            	' . $option_values[1] . '
+		            </label>
+		        </div>';
+			}
+		}
+
+		if ($type == 'checkbox') {
+
+			$html_field = '';
+			$class = ' class="' . $CI->form->build_string_validation(get_value($field, 'validations')) . '"';
+
+			// Build all radios
+			foreach ($options as $option => $option_values) {
+
+				$field_value = 'value="' . $option_values[0] . '"';
+				$checked = ($value == $option_values[0]) ? ' checked="true"' : '';
+
+				$html_field .= '
+				<div class="checkbox">
+	                <label>
+	                	<input type="checkbox" ' . $name . $id . $class . $maxlength . $masks . $style . $javascript . $field_value . $checked . ' />
+		            	' . $option_values[1] . '
+		            </label>
+		        </div>';
 			}
 		}
 	break;
 }
 ?>
 
-<div>
+<div class="form-group">
 	<label>
 		<?php echo $label ?>
 		<?php if($description != '') { ?>

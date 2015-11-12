@@ -88,6 +88,7 @@ $id_group = get_value($group, 'id_user_group');
                     <div class="form-group">
                         <label><?php echo lang('Group') ?>*</label>
                         <input type="text" class="form-control validate[required] name" value="<?php echo get_value($group, 'name') ?>" />
+                        <input type="hidden" class="validate[required] old_group" value="<?php echo get_value($group, 'name') ?>" />
                     </div>
 
                     <div class="form-group">
@@ -202,6 +203,7 @@ $id_group = get_value($group, 'id_user_group');
             data : {
                 'id_user_group' : form.find('.id_user_group').val(),
                 'name' : form.find('.name').val(),
+                'old_group' : form.find('.old_group').val(),
                 'description' : form.find('.description').val()
             },
             cache: false,

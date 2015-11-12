@@ -1,25 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?php echo APP_NAME ?></title>
-
-    <!-- Core Scripts - Include with every page -->
-    <script src="<?php echo URL_JS ?>/jquery-2.1.3.min.js"></script>
-    <script src="<?php echo URL_CSS ?>/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- App Scripts - Include with every page -->
-    <script src="<?php echo URL_JS ?>/app-functions.js"></script>
-
-    <!-- CSS Assets - Include with every page -->
-    <link href="<?php echo URL_CSS ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo URL_CSS ?>/bootflat/css/bootflat.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo URL_CSS ?>/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- CSS Template - Override other styles -->
-    <link href="<?php echo URL_TEMPLATE ?>/styles.css" rel="stylesheet" type="text/css" />
+    <?php echo $this->template->load_html_component('header-assets') ?>
 
     <style>
         body { padding: 30px; }

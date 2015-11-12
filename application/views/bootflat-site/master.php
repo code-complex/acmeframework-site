@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?php echo APP_NAME ?></title>
+    <title><?php echo APP_NAME ?> | <?php echo lang('A powerful CodeIgniter application framework') ?></title>
 
     <!-- Core Scripts - Include with every page -->
     <script src="<?php echo URL_JS ?>/jquery-2.1.3.min.js"></script>
@@ -42,6 +42,20 @@
 
     <!-- CSS Site - Override other styles -->
     <link href="<?php echo URL_TEMPLATE ?>/site.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo URL_IMG ?>/favicon.ico">
+
+    <!-- Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-64200429-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 </head>
 
@@ -140,15 +154,21 @@
         // Put all HTML into a container
         $.container_html();
 
+        // Tooltips
+        $('body').tooltip({
+            selector: "[data-toggle=tooltip]",
+            container: "body"
+        });
+
         // =================
-        // language callback
+        // Language callback
         // =================
         $('a.change-language').on('click', function () {
             $.change_language_custom($(this).attr('id'));
         });
 
         // ======================
-        // custom change language
+        // Custom change language
         // ======================
         $.change_language_custom = function (language) {
 

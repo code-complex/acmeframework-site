@@ -12,7 +12,7 @@
 |
 */
 $config['APP_NAME'] = 'ACME Framework';		// application name
-$config['TEMPLATE'] = 'bootflat';			// current template (inside /views)
+$config['TEMPLATE'] = 'bootflat-site';			// current template (inside /views)
 $config['LANGUAGE'] = 'en_US';				// default language
 $config['EMAIL_FROM'] = 'noreply@app';		// to send emails
 

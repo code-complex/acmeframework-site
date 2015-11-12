@@ -12,12 +12,15 @@
 
                 <p class="text-lead text-center">
                     <?php echo lang('ACME Framework is a CodeIgniter powerful small application with a lot of features ready-to-use like')?> <strong><?php echo lang('login') ?></strong>, <strong><?php echo lang('users') ?></strong>, <strong><?php echo lang('permissions') ?></strong>, <strong><?php echo lang('menus') ?></strong>, a <strong><?php echo lang('powerful API') ?></strong> and <strong><?php echo lang('more') ?></strong>.
-                    <a href="https://www.github.com/code-complex/acmeframework" target="_blank"><?php echo lang('View on Github') ?> <i class="fa fa-fw fa-github"></i></a>.
+
+                    <a href="<?php echo URL_ROOT ?>/docs"><?php echo lang('Read the docs') ?></a>
+                    <?php echo lang('or') ?>
+                    <a href="https://www.github.com/code-complex/acmeframework" target="_blank"><?php echo lang('View on Github') ?></a>.
                 </p>
 
                 <br />
 
-                <a class="btn btn-md btn-success" href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip" style="margin-bottom: 15px">
+                <a class="btn btn-md btn-success" onclick="ga('send', 'event', 'Downloads', 'download-version-<?php echo ACME_VERSION ?>', 'Download Version <?php echo ACME_VERSION ?>');" href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip" style="margin-bottom: 15px">
                     <h4 style="margin: 5px 0">
                         <i class="fa fa-fw fa-download"></i>
                         <?php echo lang('Free download') ?>
@@ -28,7 +31,7 @@
                 &nbsp;
                 &nbsp;
 
-                <a class="btn btn-md btn-default" href="http://demo.acmeframework.org" style="margin-bottom: 15px">
+                <a class="btn btn-md btn-default" onclick="ga('send', 'event', 'Demo', 'see-a-demo', 'See a Demo');" href="http://demo.acmeframework.org" style="margin-bottom: 15px">
                     <h4 style="margin: 5px 0">
                         <i class="fa fa-fw fa-external-link-square"></i>
                         <?php echo lang('See a demo') ?>
@@ -58,7 +61,7 @@
 
                 <div class="panel-body content">
 
-                    <div class="carousel slide" id="carousel-site" data-ride="slide">
+                    <div class="carousel slide" id="carousel-site" data-ride="slide" data-interval="3000">
 
                         <div class="carousel-inner">
 
@@ -67,7 +70,7 @@
                                 <pre class="code-php">
 &lt;?php
 /**
- * Controller / Module Site
+ * Controller/Module Site
  */
 class Site extends ACME_Controller {
 
@@ -97,6 +100,8 @@ class Site extends ACME_Controller {
                             <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-dashboard.png" class="img-responsive" /></div>
 
                             <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-module-manager.png" class="img-responsive" /></div>
+
+                            <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-settings.png" class="img-responsive" /></div>
 
                             <div class="item"><img src="<?php echo URL_UPLOAD ?>/site-content/app-logs.png" class="img-responsive" /></div>
 
@@ -286,55 +291,6 @@ class Site extends ACME_Controller {
             </div>
 
         </div>
-
-        <div style="margin: 15px 0 0">
-
-            <small>
-
-                <a href="http://github.com/code-complex/acmeframework" target="_blank"><?php echo lang('GitHub page') ?></a>
-
-                &nbsp;
-                &bull;
-                &nbsp;
-
-                <a href="<?php echo URL_ROOT ?>/docs/older-versions"><?php echo lang('Older versions') ?></a>
-
-                &nbsp;
-                &bull;
-                &nbsp;
-
-                <?php echo lang('Created by') ?> <a href="http://twitter.com/leanndro" target="_blank">Leandro Antunes</a>
-
-                &nbsp;
-                &bull;
-                &nbsp;
-
-                <?php echo lang('Maintained by') ?> <a href="http://www.codecomplex.com.br" target="_blank">Code Complex</a>
-
-            </small>
-
-        </div>
-
-    <div class="container">
-
-    <div class="row">
-
-        <div class="col-sm-12">
-
-            <div class="text-center">
-
-
-
-            <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=follow&count=true"
-            allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
-
-
-
-            </div>
-
-        </div>
-
-    </div>
 
     </div>
 

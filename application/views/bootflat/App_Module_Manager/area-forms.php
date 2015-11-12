@@ -302,7 +302,7 @@ foreach ($fields as $field) :
                             <div class="list-json hide">
                                 <small>
                                     <div><?php echo lang('Example:') ?></div>
-                                    <pre>[ { "CAMPO1" : "VALOR 1" }, { "CAMPO2" : "VALOR 2" } ]</pre>
+                                    <pre>[ { "<?php echo lang('Value 01') ?>" : "<?php echo lang('Label Foo') ?>" }, { "<?php echo lang('Value 02') ?>" : "<?php echo lang('Label Bar') ?>" } ]</pre>
                                 </small>
                             </div>
                         </div>

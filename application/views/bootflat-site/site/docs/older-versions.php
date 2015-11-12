@@ -5,15 +5,15 @@
         <div class="col-sm-12 col-md-12">
 
             <i class="fa fa-fw fa-book hidden-sm hidden-xs pull-right" style="font-size: 140px"></i>
-            
+
             <h1 style="margin: 10px 0 20px 0">ACME Docs</h1>
-            
+
             <h3 style="margin: 10px 0 10px 0"><?php echo lang('Read the full documentation. Become an ACME ninja!') ?></h3>
 
         </div>
 
     </div>
-    
+
 </div>
 
 <div class="module-breadcrumbs">
@@ -29,7 +29,7 @@
                 <li><a href="<?php echo URL_ROOT ?>" style="font-size: 18px"><i class="fa fa-fw fa-home"></i></a></li>
 
                 <li><a href="<?php echo URL_ROOT ?>/docs"><?php echo lang('ACME Docs') ?></a></li>
-                
+
                 <li><?php echo lang('Older versions') ?></li>
 
             </ol>
@@ -64,21 +64,21 @@
                             <tr>
                                 <th style="width: 01%"><?php echo lang('Version')?></th>
                                 <th><?php echo lang('Name')?></th>
-                                <th style="width: 01%"><?php echo lang('Actions')?></th>
+                                <th style="width: 01%"><?php echo lang('Download')?></th>
                             </tr>
                         </thead>
 
                         <tbody>
 
-                        <?php 
+                        <?php
                         $i = 0;
                         foreach ($allowed as $v) { ?>
                             <?php if($v != 'older-versions') {?>
                             <tr>
-                                <td><code><?php echo $v ?></code></td>
+                                <td><a href="<?php echo URL_ROOT ?>/docs/<?php echo $v ?>" class="text-bold text-unbroken" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo lang('Read the docs') ?>"><?php echo $v ?></a></td>
                                 <td>
                                     ACME Framework
-                                    
+
                                     <?php if($v == ACME_VERSION) {?>
                                     &nbsp;
                                     <span class="label label-info"><?php echo lang('Latest release')?></span>
@@ -90,14 +90,12 @@
                                     <?php } ?>
                                 </td>
                                 <td style=" white-space:nowrap">
-                                    <a href="http://github.com/code-complex/acmeframework/archive/<?php echo $v ?>.zip" class="btn btn-success"> <i class="fa fa-fw fa-download"></i><?php echo lang('Download') ?></a>
-                                    &nbsp;
-                                    <a href="<?php echo URL_ROOT ?>/docs/<?php echo $v ?>" class="btn btn-primary"> <i class="fa fa-fw fa-book"></i><?php echo lang('Read the docs') ?></a>
+                                    <a href="http://github.com/code-complex/acmeframework/archive/<?php echo $v ?>.zip" target="_blank" class="text-unbroken"><i class="fa fa-fw fa-external-link-square"></i> http://github.com/code-complex/acmeframework/archive/<?php echo $v ?>.zip</a>
                                 </td>
                             </tr>
                             <?php } ?>
                         <?php $i++; } ?>
-                        
+
                         </tbody>
 
                     </table>
