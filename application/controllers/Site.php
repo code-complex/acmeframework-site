@@ -104,7 +104,7 @@ class Site extends ACME_Controller {
 	*/
 	public function community()
 	{
-		$this->template->load_page('site/community');
+		$this->template->load_page($this->controller . '/community');
 	}
 
 	/**
@@ -114,7 +114,7 @@ class Site extends ACME_Controller {
 	*/
 	public function oracle()
 	{
-		$this->template->load_page('site/oracle');
+		$this->template->load_page($this->controller . '/oracle');
 	}
 
 	/**
