@@ -15,12 +15,12 @@
 
                     <a href="<?php echo URL_ROOT ?>/docs"><?php echo lang('Read the docs') ?></a>
                     <?php echo lang('or') ?>
-                    <a href="https://www.github.com/code-complex/acmeframework" target="_blank"><?php echo lang('View on Github') ?></a>.
+                    <a href="https://www.github.com/codecomplex-io/acmeframework" target="_blank"><?php echo lang('View on Github') ?></a>.
                 </p>
 
                 <br />
 
-                <a class="btn btn-md btn-success" onclick="ga('send', 'event', 'Downloads', 'download-version-<?php echo ACME_VERSION ?>', 'Download Version <?php echo ACME_VERSION ?>');" href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip" style="margin-bottom: 15px">
+                <a class="btn btn-md btn-success" onclick="ga('send', 'event', 'Downloads', 'download-version-<?php echo ACME_VERSION ?>', 'Download Version <?php echo ACME_VERSION ?>');" href="https://github.com/codecomplex-io/acmeframework/archive/<?php echo ACME_VERSION ?>.zip" style="margin-bottom: 15px">
                     <h4 style="margin: 5px 0">
                         <i class="fa fa-fw fa-download"></i>
                         <?php echo lang('Free download') ?>
@@ -240,14 +240,14 @@ class Site extends ACME_Controller {
 
                 <h3>Github</h3>
 
-                <p class="text-lead"><?php echo lang('View and star ')?> <a href="http://www.github.com/code-complex/acmeframework" target="_blank"><?php echo lang('project on Github')?></a>.</p>
+                <p class="text-lead"><?php echo lang('View and star ')?> <a href="http://www.github.com/codecomplex-io/acmeframework" target="_blank"><?php echo lang('project on Github')?></a>.</p>
 
                 <hr />
 
-                <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=watch&count=true"
+                <iframe src="http://ghbtns.com/github-btn.html?user=codecomplex-io&repo=acmeframework&type=watch&count=true"
                 allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
 
-                <iframe src="http://ghbtns.com/github-btn.html?user=code-complex&repo=acmeframework&type=fork&count=true"
+                <iframe src="http://ghbtns.com/github-btn.html?user=codecomplex-io&repo=acmeframework&type=fork&count=true"
                 allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
 
             </div>
@@ -286,7 +286,7 @@ class Site extends ACME_Controller {
 
                 <hr />
 
-                <a href="http://www.codecomplex.com.br" target="_blank" class="btn btn-xs btn-primary">Code Complex <i class="fa fa-fw fa-external-link-square"></i></a>
+                <a href="http://codecomplex.io" target="_blank" class="btn btn-xs btn-primary">Code Complex <i class="fa fa-fw fa-external-link-square"></i></a>
 
             </div>
 

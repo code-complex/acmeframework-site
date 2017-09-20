@@ -8,7 +8,7 @@
 
         <p>
             <?php echo lang('Start using ACME Framework is an easier process. You do not need any special technology, just ') ?>
-            <a href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release')?></a>,
+            <a href="https://github.com/codecomplex-io/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release')?></a>,
             <?php echo lang('put inside your web server and access the folder through a browser. A page like this must appear:') ?>
         </p>
 
@@ -51,7 +51,7 @@
             <div class="updating-content hidden">
                 <p>
                     <?php echo lang('Upgrading ACME from version 2.x.x to version 3.0.0 is simple. You just have to')?>
-                    <a href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
+                    <a href="https://github.com/codecomplex-io/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
                     <?php echo lang('and unzip it inside your current project. After that, follow these steps below:') ?>
 
                     <ol>
@@ -72,7 +72,7 @@
             <div class="updating-content hidden">
                 <p>
                     <?php echo lang('Upgrading ACME from version 2.2.10 to version 2.3.12 is a simple task. You just have to')?>
-                    <a href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
+                    <a href="https://github.com/codecomplex-io/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
                     <?php echo lang('and unzip it inside your current project. After that, open the file') ?>
                     application/core/acme/<strong>acme_core_controller.php</strong>
                     <?php echo lang('and change the line:') ?>
@@ -104,7 +104,7 @@
 
                 <p>
                     <?php echo lang('After you did that')?>,
-                    <a href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
+                    <a href="https://github.com/codecomplex-io/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
                     <?php echo lang('and unzip it inside your current project. Return the files you saved into their original place. After that, open the file') ?>
                     application/core/acme/<strong>acme_core_controller.php</strong>
                     <?php echo lang('and change the line:') ?>
