@@ -67,7 +67,7 @@ $user_img = ( ! file_exists(PATH_UPLOAD . '/user-photos/' . basename($user_img))
         </li>
         <li class="divider"></li>
         <li>
-            <a href="http://www.acmeframework.org" target="_blank">
+            <a href="http://acmeframework.codecomplex.io" target="_blank">
                 <i class="fa fa-question-circle fa-fw"></i>
                 <?php echo lang('Help') ?>
             </a>

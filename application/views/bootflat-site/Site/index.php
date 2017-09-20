@@ -31,7 +31,7 @@
                 &nbsp;
                 &nbsp;
 
-                <a class="btn btn-md btn-default" onclick="ga('send', 'event', 'Demo', 'see-a-demo', 'See a Demo');" href="http://demo.acmeframework.org" style="margin-bottom: 15px">
+                <a class="btn btn-md btn-default" onclick="ga('send', 'event', 'Demo', 'see-a-demo', 'See a Demo');" href="http://demo.acmeframework.codecomplex.io" style="margin-bottom: 15px">
                     <h4 style="margin: 5px 0">
                         <i class="fa fa-fw fa-external-link-square"></i>
                         <?php echo lang('See a demo') ?>

@@ -40,7 +40,7 @@ class Site extends ACME_Controller {
 
 		// Set url_default setting
 		if ( $this->session->userdata('url_default') == '')
-			$this->session->set_userdata('url_default', 'http://www.acmeframework.org');
+			$this->session->set_userdata('url_default', 'http://acmeframework.codecomplex.io');
 	}
 
 	/**

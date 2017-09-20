@@ -26,7 +26,7 @@
                 </button>
 
                 <!-- brand/logo -->
-                <a href="http://www.acmeframework.org" class="navbar-brand" target="_blank"><img src="<?php echo URL_IMG ?>/logo-acme.png" /></a>
+                <a href="http://acmeframework.codecomplex.io" class="navbar-brand" target="_blank"><img src="<?php echo URL_IMG ?>/logo-acme.png" /></a>
 
             </div>
 
@@ -34,7 +34,7 @@
 
                 <ul class="nav navbar-nav">
 
-                    <li><a href="http://www.acmeframework.org/docs" target="_blank"><i class="fa fa-fw fa-question-circle"></i> <?php echo lang('Help') ?></a></li>
+                    <li><a href="http://acmeframework.codecomplex.io/docs" target="_blank"><i class="fa fa-fw fa-question-circle"></i> <?php echo lang('Help') ?></a></li>
 
                     <li class="dropdown">
 						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">

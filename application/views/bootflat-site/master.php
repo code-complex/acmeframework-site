@@ -132,7 +132,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="http://demo.acmeframework.org" target="_blank"><?php echo lang('See a demo')?></a></li>
+                    <li><a href="http://demo.acmeframework.codecomplex.io" target="_blank"><?php echo lang('See a demo')?></a></li>
 
                     <li><a href="<?php echo URL_ROOT ?>/docs"><?php echo lang('Documentation')?></a></li>
 
