@@ -68,7 +68,7 @@
                 <ol>
                     <li>
                         <?php echo lang('Enter on ACME Framework') ?>
-                        <a href="http://github.com/code-complex/acmeframework/issues" target="_blank"><?php echo lang('GitHub issues page')?></a>.
+                        <a href="http://github.com/codecomplex-io/acmeframework/issues" target="_blank"><?php echo lang('GitHub issues page')?></a>.
                     </li>
                     <li>
                         <?php echo lang('Check if a feature request like that already exist. If exist, please do not duplicate it - you can add a comment reinforcing it.') ?>
@@ -91,7 +91,7 @@
                 <ol>
                     <li>
                         <?php echo lang('Enter on ACME Framework') ?>
-                        <a href="http://github.com/code-complex/acmeframework/issues" target="_blank"><?php echo lang('GitHub issues page')?></a>.
+                        <a href="http://github.com/codecomplex-io/acmeframework/issues" target="_blank"><?php echo lang('GitHub issues page')?></a>.
                     </li>
                     <li>
                         <?php echo lang('Check if someone has already reported exactly the same bug. If yes, please do not duplicate it; just add a comment so we can fix as soon as possible.') ?>
@@ -115,7 +115,7 @@
             </h4>
             <p>
                 <?php echo lang('You can')?>
-                <a href="http://github.com/code-complex/acmeframework/fork" target="_blank">fork</a>
+                <a href="http://github.com/codecomplex-io/acmeframework/fork" target="_blank">fork</a>
                 <?php echo lang('the project to fix a bug or to add a new feature by your own. Then you can submit a new pull request - we will verify and then merge it if everything is correct.')?>
                 <strong><?php echo lang('Important:')?></strong>
                 <?php echo lang('do not forget to add a comment referencing the bug fix or the new feature.')?>
@@ -131,7 +131,7 @@
                 <?php echo lang('If you know another language and want to improve ACME Framework by adding support for this language you can do it!')?>
                 <ol>
                     <li>
-                        <a href="http://github.com/code-complex/acmeframework/fork" target="_blank">Fork</a>
+                        <a href="http://github.com/codecomplex-io/acmeframework/fork" target="_blank">Fork</a>
                         <?php echo lang('the project and then clone it on your development server') ?>.
                     </li>
                     <li>

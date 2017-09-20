@@ -8,7 +8,7 @@
 
         <p>
             <?php echo lang('Start using ACME Framework is very easy. You do not need any special technology, just ') ?> 
-            <a href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release')?></a>,
+            <a href="https://github.com/codecomplex-io/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release')?></a>,
             <?php echo lang('put inside your server and access the folder through a browser. A page like this must appear:') ?>
         </p>
 
@@ -36,7 +36,7 @@
 
         <p>
             <?php echo lang('Upgrading ACME from version 2.2.10 to a more recent version is a simple task. You just have to')?>
-            <a href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
+            <a href="https://github.com/codecomplex-io/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
             <?php echo lang('and unzip it inside your current project. After that, open the file') ?>
             application/core/acme/<strong>acme_core_controller.php</strong>
             <?php echo lang('and change the line:') ?>
@@ -61,7 +61,7 @@
 
         <p>
             <?php echo lang('After you did that')?>, 
-            <a href="https://github.com/code-complex/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
+            <a href="https://github.com/codecomplex-io/acmeframework/archive/<?php echo ACME_VERSION ?>.zip"><?php echo lang('download the latest release') ?></a>
             <?php echo lang('and unzip it inside your current project. Return the files you saved into their original place. After that, open the file') ?>
             application/core/acme/<strong>acme_core_controller.php</strong>
             <?php echo lang('and change the line:') ?>
